@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko Pakaian Azura</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #add8e6; /* biru muda */
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+        background-color: #add8e6; /* biru muda */
+        padding: 1rem;
+        z-index: 1000;
+        top: 0;
+    }
+
+    .navbar a {
+        color: white;
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        color: white;
+    }
+
+    .search-box {
+        margin: 20px auto;
+        max-width: 400px;
+    }
+
+    .search-box input {
+        border-radius: 25px;
+        padding: 10px 20px;
+        border: 2px solid #add8e6; /* biru muda */
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .product-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.3); /* biru muda */
+    }
+
+    .product-card img {
+        max-width: 200px;
+    }
+
+    .btn-pink {
+        background-color: #add8e6; /* biru muda */
+        border: none;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+<!-- Navbar -->
+  <nav class="navbar shadow-sm mb-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand">Toko Pakaian Zara</span>
+      <div>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="proses.php">Beli Produk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Box -->
+  <div class="container search-box">
+    <input type="text" class="form-control" id="searchInput" onkeyup="cariProduk()" placeholder="Search produk...">
+  </div>
+
+  <!-- Produk -->
+  <div class="container card-container" id="produkList">
+    
+    <div class="product-card" data-title="baju pria">
+      <h5>Baju Pria</h5>
+      <img src="j1.jpg" alt="Jaket Pria">
+ <img src="j2.jpg" alt="Jaket Pria">
+ <img src="j3.jpg" alt="Jaket Pria">
+ <img src="j4.jpg" alt="Jaket Pria">
+
+      <p>Jaket/Kaos pria simpel dan elegan untuk aktivitas harian maupun hangout.</p>
+  <a href="pria.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+ </div>
+
+    <div class="product-card" data-title="baju wanita">
+      <h5>Baju Wanita</h5>
+      <img src="p1.jpg" alt="Baju Wanita">
+  <img src="p2.jpg" alt="Baju Wanita">
+  <img src="p3.jpg" alt="Baju Wanita">
+  <img src="p4.jpg" alt="Baju Wanita">
+
+      <p>Baju Wanita yang anggun dan nyaman untuk kerja maupun acara formal.</p>
+      <a href="wanita.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+</div>
+    <div class="product-card" data-title="baju anak">
+      <h5>Baju Anak</h5>
+      <img src="a1.jpg" alt="Baju Anak">
+ <img src="a2.jpg" alt="Baju Anak">
+ <img src="a3.jpg" alt="Baju Anak">
+ <img src="a4.jpg" alt="Baju Anak">
+
+      <p>Dress anak perempuan motif elegan dan nyaman dipakai untuk acara santai.</p>
+       <a href="anak.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+  </div>
+  <div class="product-card" data-title="celana pria">
+      <h5>Celana Pria</h5>
+      <img src="c1.jpg" alt="celana lan">
+<img src="c2.jpg" alt="celana 21">
+<img src="c3.jpg" alt="celana 22">
+<img src="c4.jpg" alt="celana 23">
+
+      <p>Celana pendek pria dengan desain kasual yang nyaman dipakai untuk aktivitas santai maupun harian.</p>
+       <a href="celana.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+  </div>
+  <div class="product-card" data-title="Celana Wanita">
+      <h5>Celana Wanita</h5>
+      <img src="w1.jpg" alt="cel 0">
+ <img src="w2.jpg" alt="cel 24">
+ <img src="w3.jpg" alt="cel 25">
+ <img src="w4.jpg" alt="cel 26">
+
+      <p>Celana pendek wanita dengan potongan modern dan nyaman dipakai untuk berbagai aktivitas</p>
+       <a href="shortpants.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+  </div>
+  <div class="product-card" data-title="celana anak">
+      <h5>Celana Anak</h5>
+      <img src="l1.jpg" alt="cel cu">
+<img src="l2.jpg" alt="cel ci">
+<img src="l3.jpg" alt="cel co">
+<img src="l4.jpg" alt="cel co">
+
+      <p>Celana anak dengan desain lucu dan nyaman dipakai untuk aktivitas sehari-hari</p>
+       <a href="cel.php" class="btn" style="background-color: #81d4fa; color: white; border: none;">
+  lihat detail
+</a>
+  </div>
+
+  <!-- Script Pencarian -->
+  <script>
+    function cariProduk() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll("#produkList .product-card");
+
+      cards.forEach(card => {
+        const title = card.getAttribute("data-title").toLowerCase();
+        if (title.includes(input)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
